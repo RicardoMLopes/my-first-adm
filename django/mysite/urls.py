@@ -22,5 +22,6 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
     path('admin/', admin.site.urls),
     path('adm/', include('adm.urls')),
-    path('adm/', include('django.contrib.auth.urls')),
+    path('^$', include('django.contrib.auth.urls')),
 ]
+
